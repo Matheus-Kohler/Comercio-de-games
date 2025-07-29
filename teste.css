@@ -10,7 +10,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
-    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/21839.jpg'); /* Nova imagem de fundo */
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/21839.jpg'); /* Imagem de fundo */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -18,66 +18,64 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Empurra o conteúdo para garantir que o rodapé fique no fundo */
+    justify-content: space-between; /* Empurrar o rodapé para o fundo */
 }
 
 /* Cabeçalho */
 header {
-    background-color: rgba(51, 51, 51, 0.8); /* Fundo com leve transparência */
+    background-color: rgba(51, 51, 51, 0.8);
     color: #fff;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     position: relative;
     z-index: 2;
 }
 
 header .logo h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
+    margin-bottom: 10px;
 }
 
-/* Navegação */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    gap: 30px;
     margin-top: 15px;
-}
-
-nav ul li {
-    margin: 0 25px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.3rem;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, transform 0.2s ease;
 }
 
 nav ul li a:hover {
     color: #ff6347;
+    transform: scale(1.1);
 }
 
-/* Seções principais */
-section {
-    padding: 60px 10%;
+/* Seção de Produtos */
+section.produtos {
+    padding: 80px 10%;
     text-align: center;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.6); /* Leve sobreposição escura para melhorar contraste */
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-section h2 {
-    font-size: 2.8rem;
+section.produtos h2 {
+    font-size: 3rem;
     margin-bottom: 20px;
     color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Lista de produtos */
+/* Lista de Produtos */
 .produtos-lista {
     display: flex;
     flex-wrap: wrap;
@@ -86,58 +84,72 @@ section h2 {
     margin-top: 50px;
 }
 
+/* Estilo de cada Produto */
 .produto {
-    background: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
-    padding: 25px;
-    width: 220px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(51, 51, 51, 0.8);
+    padding: 20px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
 }
 
+/* Efeito de hover no Produto */
 .produto:hover {
     transform: translateY(-15px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
+/* Imagem do Produto */
 .produto img {
     width: 100%;
-    border-radius: 8px;
+    height: 200px; /* Tamanho fixo para todas as imagens */
+    object-fit: cover; /* Garante que a imagem cubra toda a área sem distorcer */
+    border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
+/* Efeito de zoom nas imagens */
 .produto img:hover {
     transform: scale(1.1);
 }
 
 .produto h3 {
     margin-top: 15px;
-    font-size: 1.6rem;
-    color: #333;
+    font-size: 1.8rem;
+    color:white;
     font-weight: 600;
 }
 
 .produto p {
     margin-top: 10px;
     font-size: 1.2rem;
-    color: #555;
+    color: white;
+    line-height: 1.5;
 }
 
 /* Rodapé */
 footer {
-    background-color: rgba(51, 51, 51, 0.8); /* Fundo escuro com transparência */
+    background-color: rgba(51, 51, 51, 0.9);
     color: #fff;
     padding: 20px;
     text-align: center;
-    margin-top: auto; /* Isso faz o rodapé ser empurrado para o fundo da página */
+    margin-top: auto;
     font-size: 1rem;
     letter-spacing: 1px;
 }
 
-/* Responsividade para telas pequenas */
+footer p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ddd;
+}
+
+/* Responsividade (para dispositivos menores) */
 @media (max-width: 768px) {
-    section {
+    section.produtos {
         padding: 40px 5%;
     }
 
@@ -149,5 +161,22 @@ footer {
     .produto {
         width: 80%;
         margin-bottom: 30px;
+    }
+
+    header .logo h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
     }
 }
