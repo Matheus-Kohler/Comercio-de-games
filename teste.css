@@ -1,0 +1,152 @@
+/* Resetando estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte padrão */
+body {
+    font-family: 'Poppins', sans-serif; /* Usando fonte do Google Fonts */
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/21839.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgba(51, 51, 51, 0.8); /* Fundo escuro com transparência */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+header .logo h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Seções */
+section {
+    padding: 60px 10%;
+    text-align: center;
+    z-index: 1;
+}
+
+section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Lista de produtos */
+.produtos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.produto {
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco suave com leve transparência */
+    padding: 25px;
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-15px); /* Levanta o cartão de produto */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.produto img:hover {
+    transform: scale(1.1); /* Zoom na imagem ao passar o mouse */
+}
+
+.produto h3 {
+    margin-top: 15px;
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.produto p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.9); /* Fundo escuro com transparência */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 60px;
+    z-index: 2;
+}
+
+footer p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    section {
+        padding: 40px 5%;
+    }
+
+    .produtos-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
