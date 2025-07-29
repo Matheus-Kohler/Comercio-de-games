@@ -5,24 +5,25 @@
     box-sizing: border-box;
 }
 
-/* Fonte padrão */
+/* Corpo */
 body {
-    font-family: 'Poppins', sans-serif; /* Usando fonte do Google Fonts */
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
-    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/21839.jpg');
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/21839.jpg'); /* Nova imagem de fundo */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: white;
+    color: #fff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* Empurra o conteúdo para garantir que o rodapé fique no fundo */
 }
 
 /* Cabeçalho */
 header {
-    background-color: rgba(51, 51, 51, 0.8); /* Fundo escuro com transparência */
+    background-color: rgba(51, 51, 51, 0.8); /* Fundo com leve transparência */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -37,6 +38,7 @@ header .logo h1 {
     letter-spacing: 5px;
 }
 
+/* Navegação */
 nav ul {
     list-style: none;
     display: flex;
@@ -59,18 +61,20 @@ nav ul li a:hover {
     color: #ff6347;
 }
 
-/* Seções */
+/* Seções principais */
 section {
     padding: 60px 10%;
     text-align: center;
     z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6); /* Leve sobreposição escura para melhorar contraste */
+    border-radius: 10px;
 }
 
 section h2 {
     font-size: 2.8rem;
     margin-bottom: 20px;
     color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Lista de produtos */
@@ -83,7 +87,7 @@ section h2 {
 }
 
 .produto {
-    background: rgba(255, 255, 255, 0.9); /* Fundo branco suave com leve transparência */
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
     padding: 25px;
     width: 220px;
     border-radius: 12px;
@@ -93,8 +97,8 @@ section h2 {
 }
 
 .produto:hover {
-    transform: translateY(-15px); /* Levanta o cartão de produto */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .produto img {
@@ -104,7 +108,7 @@ section h2 {
 }
 
 .produto img:hover {
-    transform: scale(1.1); /* Zoom na imagem ao passar o mouse */
+    transform: scale(1.1);
 }
 
 .produto h3 {
@@ -120,16 +124,13 @@ section h2 {
     color: #555;
 }
 
+/* Rodapé */
 footer {
-    background-color: rgba(51, 51, 51, 0.9); /* Fundo escuro com transparência */
+    background-color: rgba(51, 51, 51, 0.8); /* Fundo escuro com transparência */
     color: #fff;
     padding: 20px;
     text-align: center;
-    margin-top: 60px;
-    z-index: 2;
-}
-
-footer p {
+    margin-top: auto; /* Isso faz o rodapé ser empurrado para o fundo da página */
     font-size: 1rem;
     letter-spacing: 1px;
 }
