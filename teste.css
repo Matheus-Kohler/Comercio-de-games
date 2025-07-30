@@ -34,9 +34,8 @@
   }
   
   header .logo h1 {
+    font-family: "Kanit", sans-serif;
     font-size: 3.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: 6px;
     margin-bottom: 10px;
   }
