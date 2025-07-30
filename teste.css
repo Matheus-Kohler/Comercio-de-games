@@ -3,16 +3,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Corpo */
-body {
+  }
+  
+  /* Corpo */
+  body {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem; /* Definindo a fonte base */
+    font-size: 1.5rem;
     line-height: 1.6;
     text-align: center;
     background-color: #f4f4f4;
-    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/21839.jpg'); /* Imagem de fundo */
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/21839.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -20,77 +20,73 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Empurrar o rodapé para o fundo */
-}
-
-/* Cabeçalho */
-header {
+    justify-content: space-between;
+  }
+  
+  /* Cabeçalho */
+  header {
     background-color: rgba(51, 51, 51, 0.8);
     color: #fff;
     padding: 30px;
     text-align: center;
     position: relative;
     z-index: 2;
-}
-
-header .logo h1 {
+  }
+  
+  header .logo h1 {
     font-size: 3.5rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 6px;
     margin-bottom: 10px;
-}
-
-nav ul {
+  }
+  
+  /* Menu */
+  nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 30px;
     margin-top: 15px;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.3rem; /* Tamanho de fonte consistente */
+    font-size: 1.3rem;
     transition: color 0.3s ease-in-out, transform 0.2s ease;
-}
-
-nav ul li a:hover {
+  }
+  
+  nav ul li a:hover {
     color: #ff6347;
     transform: scale(1.1);
-}
-
-.intro{
-    margin-top: 4em;
-}
-
-/* Seção de Produtos */
-section.produtos {
+  }
+  
+  /* Produtos */
+  section.produtos {
     padding: 80px 10%;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-section.produtos h2 {
-    font-size: 2.5rem; /* Ajuste no tamanho do título da seção */
+    background: rgba(51, 51, 51, 0.8);
+  }
+  
+  section.produtos h2 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: #fff;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Lista de Produtos */
-.produtos-lista {
+  }
+  
+  .produtos-lista {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 30px;
     margin-top: 50px;
-}
-
-/* Estilo de cada Produto */
-.produto {
+  }
+  
+  .produto {
     background: rgba(51, 51, 51, 0.8);
     padding: 20px;
     width: 250px;
@@ -99,47 +95,42 @@ section.produtos h2 {
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     overflow: hidden;
-    font-size: 1.5rem; /* Garantindo fonte consistente em todo o produto */
-}
-
-/* Efeito de hover no Produto */
-.produto:hover {
+    font-size: 1.5rem;
+  }
+  
+  .produto:hover {
     transform: translateY(-15px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-}
-
-/* Imagem do Produto */
-.produto img {
+  }
+  
+  .produto img {
     width: 100%;
-    height: 200px; /* Tamanho fixo para todas as imagens */
-    object-fit: cover; /* Garante que a imagem cubra toda a área sem distorcer */
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
-}
-
-/* Efeito de zoom nas imagens */
-.produto img:hover {
+  }
+  
+  .produto img:hover {
     transform: scale(1.1);
-}
-
-/* Título do Produto */
-.produto h3 {
+  }
+  
+  .produto h3 {
     margin-top: 15px;
-    font-size: 1.5rem; /* Tamanho consistente com o restante do texto */
+    font-size: 1.5rem;
     color: white;
     font-weight: 600;
-}
-
-/* Descrição do Produto */
-.produto p {
+  }
+  
+  .produto p {
     margin-top: 10px;
-    font-size: 1.5rem; /* Tamanho consistente com o título */
+    font-size: 1.5rem;
     color: white;
     line-height: 1.5;
-}
-
-/* Rodapé */
-footer {
+  }
+  
+  /* Rodapé */
+  footer {
     background-color: rgba(51, 51, 51, 0.9);
     color: #fff;
     padding: 20px;
@@ -147,44 +138,93 @@ footer {
     margin-top: auto;
     font-size: 1rem;
     letter-spacing: 1px;
-}
-
-footer p {
+  }
+  
+  footer p {
     font-size: 1rem;
     font-weight: 400;
     color: #ddd;
-}
-
-/* Responsividade (para dispositivos menores) */
-@media (max-width: 768px) {
+  }
+  
+  /* Links padrão */
+  a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #ff6347;
+    text-decoration: underline;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
     section.produtos {
-        padding: 40px 5%;
+      padding: 40px 5%;
     }
-
+  
     .produtos-lista {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
     .produto {
-        width: 80%;
-        margin-bottom: 30px;
+      width: 80%;
+      margin-bottom: 30px;
     }
-
+  
     header .logo h1 {
-        font-size: 2.5rem;
+      font-size: 2.5rem;
     }
-
+  
     nav ul {
-        flex-direction: column;
-        gap: 20px;
+      flex-direction: column;
+      gap: 20px;
     }
-
+  
     nav ul li a {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
-
+  
     footer {
-        font-size: 0.9rem;
+      font-size: 0.9rem;
     }
-}
+  }
+  
+  /* Estilos para intro na index */
+  .intro {
+    margin: 60px auto;
+    max-width: 600px;
+    background: rgba(51, 51, 51, 0.8);
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .intro h2 {
+    margin-bottom: 20px;
+  }
+  
+  .btn-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  button {
+    cursor: pointer;
+    padding: 12px 30px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff6347;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #e5533c;
+  }
+  
