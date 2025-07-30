@@ -1,32 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Jogos e Acessórios</title>
-    <link rel="stylesheet" href="teste.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja de Jogos e Acessórios</title>
+  <link rel="stylesheet" href="teste.css" />
+  <script>
+    // Função para login simples
+    function entrar() {
+      localStorage.setItem('logado', 'true');
+      alert('Você entrou como usuário!');
+      // Atualiza a interface para mostrar logout
+      atualizarInterface();
+    }
+
+    function continuarSemLogin() {
+      localStorage.removeItem('logado');
+      alert('Você entrou como visitante.');
+      atualizarInterface();
+    }
+
+    function logout() {
+      localStorage.removeItem('logado');
+      alert('Você saiu.');
+      atualizarInterface();
+    }
+
+    function atualizarInterface() {
+      const logado = localStorage.getItem('logado') === 'true';
+      document.getElementById('status-login').textContent = logado
+        ? 'Status: Usuário logado'
+        : 'Status: Visitante (não logado)';
+
+      document.getElementById('btn-entrar').style.display = logado ? 'none' : 'inline-block';
+      document.getElementById('btn-continuar').style.display = logado ? 'none' : 'inline-block';
+      document.getElementById('btn-logout').style.display = logado ? 'inline-block' : 'none';
+    }
+
+    window.onload = atualizarInterface;
+  </script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>Loja de Jogos</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="jogos.html">Jogos</a></li>
-                <li><a href="acessorios.html">Acessórios</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <h1>Loja de Jogos</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="acessorios.html">Acessórios</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="intro">
-        <h2>Bem-vindo à Tec Jogos e Acessórios!</h2>
-        <p>Encontre os melhores jogos e acessórios para seu console aqui!</p>
-    </section>
+  <section class="intro">
+    <h2>Bem-vindo à Tec Jogos e Acessórios!</h2>
+    <p>Encontre os melhores jogos e acessórios para seu console aqui!</p>
 
-    <footer>
-        <p>&copy; 2025 Loja de Jogos. Todos os direitos reservados.</p>
-    </footer>
+    <div id="status-login" style="margin-bottom:20px; font-weight:600;"></div>
+
+    <div class="btn-group">
+      <button id="btn-entrar" onclick="entrar()">Entrar como usuário</button>
+      <button id="btn-continuar" onclick="continuarSemLogin()">Continuar sem login</button>
+      <button id="btn-logout" onclick="logout()" style="display:none;">Sair</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Loja de Jogos. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
