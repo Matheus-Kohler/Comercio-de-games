@@ -8,7 +8,9 @@
 /* Corpo */
 body {
     font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem; /* Definindo a fonte base */
     line-height: 1.6;
+    text-align: center;
     background-color: #f4f4f4;
     background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/21839.jpg'); /* Imagem de fundo */
     background-size: cover;
@@ -50,7 +52,7 @@ nav ul {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* Tamanho de fonte consistente */
     transition: color 0.3s ease-in-out, transform 0.2s ease;
 }
 
@@ -63,13 +65,12 @@ nav ul li a:hover {
 section.produtos {
     padding: 80px 10%;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 section.produtos h2 {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Ajuste no tamanho do título da seção */
     margin-bottom: 20px;
     color: #fff;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
@@ -94,6 +95,7 @@ section.produtos h2 {
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     overflow: hidden;
+    font-size: 1.5rem; /* Garantindo fonte consistente em todo o produto */
 }
 
 /* Efeito de hover no Produto */
@@ -116,16 +118,18 @@ section.produtos h2 {
     transform: scale(1.1);
 }
 
+/* Título do Produto */
 .produto h3 {
     margin-top: 15px;
-    font-size: 1.8rem;
-    color:white;
+    font-size: 1.5rem; /* Tamanho consistente com o restante do texto */
+    color: white;
     font-weight: 600;
 }
 
+/* Descrição do Produto */
 .produto p {
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Tamanho consistente com o título */
     color: white;
     line-height: 1.5;
 }
