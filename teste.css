@@ -61,6 +61,10 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
+.intro{
+    margin-top: 4em;
+}
+
 /* Seção de Produtos */
 section.produtos {
     padding: 80px 10%;
